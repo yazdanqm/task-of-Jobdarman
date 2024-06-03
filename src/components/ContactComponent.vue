@@ -1,6 +1,5 @@
 <script setup>
 import ButtonComponent from '@/components/base/ButtonComponent.vue'
-import DividerComponent from '@/components/base/DividerComponent.vue'
 import IconPhone from '@/components/icons/IconPhone.vue'
 import IconEnvelope from '@/components/icons/IconEnvelope.vue'
 import IconBuilding from '@/components/icons/IconBuilding.vue'
@@ -23,30 +22,30 @@ const selected = ref(options.value[4])
 const sendCopy = ref(false)
 </script>
 <template>
-  <div class="h-[100vh] bg-purple relative flex items-center justify-center">
+  <div class="min-h-[100vh] py-16 bg-purple relative flex items-center justify-center">
     <img
       src="/images/room.jpg"
       class="absolute w-full h-full object-cover opacity-70"
       alt="Wave background"
     />
-    <div class="container mx-auto">
-      <div class="grid grid-cols-2 gap-6 relative z-10">
+    <div class="container mx-auto max-2xl:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 relative z-10">
         <div class="flex items-center justify-center">
           <div class="w-[400px]">
-            <div class="text-[42px] text-white font-bold leading-[50px]">Let’s Keep in Touch</div>
-            <div class="text-[22px] font-medium text-white mt-6">
+            <div class="text-[28px] lg:text-[42px] text-white font-bold leading-[50px]">Let’s Keep in Touch</div>
+            <div class="text-[18px] lg:text-[22px] font-medium text-white mt-6">
               We have created a new product that will help designers, developers and companies
               create websites for their startups quickly and easily.
             </div>
-            <div class="flex items-center gap-4 text-[16px] text-white mt-10">
+            <div class="flex items-center gap-4 text-[14px] lg:text-[16px] text-white mt-10">
               <IconPhone />
               <div>+1 555 505 5050</div>
             </div>
-            <div class="flex items-center gap-4 text-[16px] text-white mt-10">
+            <div class="flex items-center gap-4 text-[14px] lg:text-[16px] text-white mt-10">
               <IconEnvelope />
               <div>info@designmodo.com</div>
             </div>
-            <div class="flex gap-4 text-[16px] text-white mt-10">
+            <div class="flex gap-4 text-[14px] lg:text-[16px] text-white mt-10">
               <IconBuilding class="!min-w-max mt-1" />
               <div>
                 San Francisco, CA560 Bush St & <br />
@@ -57,14 +56,14 @@ const sendCopy = ref(false)
           </div>
         </div>
         <div class="flex items-center justify-center">
-          <div class="bg-white rounded-[10px] w-[470px] p-12">
+          <div class="bg-white rounded-[10px] w-[470px] p-6 lg:p-12">
             <form class="flex flex-col gap-6">
-              <div class="flex items-center gap-6">
+              <div class="md:flex items-center gap-6">
                 <div class="w-full">
                   <LabelComponent id="your-name" text="YOUR NAME" />
                   <input id="your-name" class="form-input" placeholder="First name" />
                 </div>
-                <div class="min-w-max">
+                <div class="min-w-max max-md:mt-6">
                   <LabelComponent id="your-budget" text="YOUR BUDGET" />
                   <SelectComponent v-model="selected" :options="options" />
                 </div>
@@ -77,7 +76,7 @@ const sendCopy = ref(false)
                 <LabelComponent id="your-message" text="YOUR MESSAGE" />
                 <textarea id="your-message" class="form-textarea" placeholder="Message"></textarea>
               </div>
-              <div class="flex items-center justify-between gap-4">
+              <div class="flex max-md:flex-col items-center justify-between gap-4">
                 <CheckBoxComponent label="Send me a copy" v-model="sendCopy"/>
                 <ButtonComponent type="submit" class="!min-h-[50px] !w-fit !h-[50px] !bg-green hover:!bg-greenDarker">
                   Send

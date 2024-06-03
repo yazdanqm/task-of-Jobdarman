@@ -83,9 +83,9 @@ body {
 }
 
 .form-input {
-    @apply rounded-full border-[2px] border-border focus:border-purple outline-none h-[50px] w-full px-4 placeholder:text-grayDarker text-[18px] font-medium;
+    @apply rounded-full border-[2px] border-border focus:border-purple outline-none h-[50px] w-full px-4 placeholder:text-grayDarker text-[16px] lg:text-[18px] font-medium;
 }
 
 .form-textarea {
-    @apply rounded-[10px] border-[2px] border-border focus:border-purple outline-none h-[110px] w-full p-4 placeholder:text-grayDarker text-[18px] font-medium;
+    @apply rounded-[10px] border-[2px] border-border focus:border-purple outline-none h-[110px] w-full p-4 placeholder:text-grayDarker text-[16px] lg:text-[18px] font-medium;
 }

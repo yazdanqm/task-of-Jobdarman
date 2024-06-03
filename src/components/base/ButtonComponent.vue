@@ -49,6 +49,6 @@ const onButtonClick = () => {
 </template>
 <style scoped>
 .button-primary {
-  @apply relative bg-purple text-white rounded-full px-8 py-4 min-h-[60px] flex items-center justify-center transition-all hover:bg-purpleDarker;
+  @apply relative bg-purple text-white rounded-full px-8 py-4 min-h-[60px] flex items-center justify-center transition-all hover:bg-purpleDarker text-[14px] lg:text-[16px];
 }
 </style>
